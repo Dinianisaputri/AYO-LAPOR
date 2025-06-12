@@ -1,6 +1,4 @@
-Berikut versi penjelasan **lebih panjang dan lengkap** dari deskripsi proyek **💬 AYO\_LAPOR – Website Layanan Pengaduan Masyarakat**:
 
----
 
 💬 AYO\_LAPOR – Website Layanan Pengaduan Masyarakat
 
