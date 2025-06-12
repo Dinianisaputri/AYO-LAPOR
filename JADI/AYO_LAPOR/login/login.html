@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk</title>
+    <link rel="stylesheet" href="../assets/login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Masuk</h1>
+        <p>Masuk dengan akun yang telah Kamu daftarkan.</p>
+        <!-- Notifikasi error login -->
+        <div id="error-message" style="color:red; margin-bottom:10px;"></div>
+        <form action="proses_login.php" method="POST">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Kata Sandi</label>
+            <input type="password" id="password" name="password" required>
+            <div class="remember-me">
+            </div>
+            <button type="submit">Masuk</button>
+        </form>
+        <p>Belum memiliki akun? <a href="../daftar/daftar.html">Daftar</a></p>
+    </div>
+    <script>
+    // Tampilkan pesan error jika ada di URL
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    if (error) {
+        document.getElementById('error-message').textContent = decodeURIComponent(error);
+    }
+    </script>
+</body>
+</html>

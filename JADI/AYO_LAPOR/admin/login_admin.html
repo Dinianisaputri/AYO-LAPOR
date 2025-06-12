@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Admin</title>
+  <style>
+    /* Reset dan pengaturan box-sizing untuk semua elemen */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Pengaturan body agar tampil di tengah layar */
+    body {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Container untuk form login */
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 350px;  /* Membatasi lebar form */
+      box-sizing: border-box;
+    }
+
+    /* Judul form */
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* Menata elemen input dan label */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Menata button login */
+    button {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(30, 64, 175, 0.3);
+    }
+
+    /* Error message */
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function validateLogin(event) {
+      event.preventDefault(); // Mencegah form langsung submit
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Validasi sederhana
+      if (username === "admin" && password === "1234") {
+        // Jika valid, redirect ke admin.php
+        window.location.href = "admin.php";
+      } else {
+        alert("Username atau Password salah!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login Admin</h2>
+    <form onsubmit="validateLogin(event)">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

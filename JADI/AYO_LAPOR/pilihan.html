@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-header {
+            margin-bottom: 20px;
+        }
+
+        .container a {
+            text-decoration: none;
+            margin: 10px 0; /* Mengatur margin atas dan bawah tombol */
+            width: 100%; /* Membuat tombol selebar kotak */
+        }
+
+        .container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #147017;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; /* Membuat tombol selebar parent */
+            box-sizing: border-box; /* Memastikan padding tidak menambah lebar total */
+        }
+
+        .container button:hover {
+            background-color: #98d39a;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <div class="login-header">
+            <h2>Login Sebagai</h2>
+        </div>
+        <div class="container">
+            <a href="admin/login_admin.html"><button type="button">Admin</button></a><br><br>
+            <a href="login/login.html"><button type="button">User</button></a>
+        </div>
+    </div>
+</body>
+</html>
